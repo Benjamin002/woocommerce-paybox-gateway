@@ -1,4 +1,4 @@
-=== Woocommerce PayBox Payment Gateway === Contributors: CASTELIS (SWO) Tags: woocommerce, commerce, e-commerce, ecommerce, payment, payment gateway, paybox Requires at least: 3.5.0 Tested up to: 3.9.1 Stable tag: 0.1.0 License: GPLv2 or later License URI: http://www.gnu.org/licenses/gpl-2.0.html
+=== Woocommerce PayBox Payment Gateway === Contributors: CASTELIS (SWO), CASTELIS (JLA), Vincent Pintat (Wallie)  Tags: woocommerce, commerce, e-commerce, ecommerce, payment, payment gateway, paybox Requires at least: 4.0 Tested up to: 4.3 Stable tag: 0.1.0 License: GPLv2 or later License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 PayBox payment gateway for woocommerce.
 
@@ -30,15 +30,15 @@ Nothing to do
 
 == Changelog ==
 
-= 0.1.0 = first version.
+= 0.1.0 = 	first version.
 
-= 0.2.0 = Check compatibility wih WooCommerce 2.0
+= 0.2.0 = 	Check compatibility wih WooCommerce 2.0
 
-= 0.2.1 = Improve autoresponse controls and allow webmaster testing.
+= 0.2.1 = 	Improve autoresponse controls and allow webmaster testing.
 
-= 0.2.2 = Solve an issue blocking parameters saving on Payment Gateways back office.
+= 0.2.2 = 	Solve an issue blocking parameters saving on Payment Gateways back office.
 
-= 0.2.3 = Add 2 paybox parameters for callback Cancel or Failed (dedicated URL)
+= 0.2.3 = 	Add 2 paybox parameters for callback Cancel or Failed (dedicated URL)
 
 = 0.3.0 =   Solve bug when using Paybox testing parameters
             Add automatic landing page creation for cancel and refused transactions
@@ -75,3 +75,7 @@ Nothing to do
 = 0.4.5 =	Fix ShortCode
 
 = 0.4.6 =	Add HMAC capability
+
+= 0.4.7 =	Merge from Vincent Pintat : Fix minor php bug, cleanup, fix compatibility with woocommerce 2.4.6
+			Improve translations
+			Code cleanup

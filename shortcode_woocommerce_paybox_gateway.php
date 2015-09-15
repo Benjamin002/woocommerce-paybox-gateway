@@ -4,10 +4,10 @@
 	 *
 	 * The thankyou page displays after successful checkout and can be hooked into by payment gateways.
 	 *
-	 * @author 	SWO (OpenBoutique)
+	 * @author 	SWO(Castelis)
 	 * @category 	Shortcodes
 	 * @package 	WordPress
-	 * @version     0.4.6
+	 * @version     0.4.7
 	 */
 
 	class WC_Shortcode_Paybox_Thankyou 
