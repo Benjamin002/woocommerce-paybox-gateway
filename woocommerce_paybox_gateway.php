@@ -22,12 +22,12 @@
 		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 		if( !is_plugin_active('woocommerce/woocommerce.php') )
 		{
-			_e('Le plugin WooCommerce doit être activé pour l\'activation de l\'extension', WC_Paybox::TEXT_DOMAIN);
+			_e('Le plugin WooCommerce doit être activé pour l\'activation de l\'extension', TEXT_DOMAIN);
 			exit;
 		}
 		if( !class_exists('WC_Payment_Gateway') )
 		{
-			_e('Une erreur est survenue concernant WooCommerce : Les méthodes de paiement semblent introuvables', WC_Paybox::TEXT_DOMAIN);
+			_e('Une erreur est survenue concernant WooCommerce : Les méthodes de paiement semblent introuvables', TEXT_DOMAIN);
 			exit;
 		}
 	}
@@ -46,12 +46,14 @@
 		DEFINE('PLUGIN_DIR', plugins_url(basename(plugin_dir_path(__FILE__)), basename(__FILE__)));
 		DEFINE('OB_VERSION', '0.4.7');
 		DEFINE('THANKS_SHORTCODE', 'woocommerce_paybox_gateway_thanks');
+		DEFINE('TEXT_DOMAIN', 'openboutique_paybox_gateway');
 
 		// Chargement des traductions
-		load_plugin_textdomain(WC_Paybox::TEXT_DOMAIN, false, dirname(plugin_basename(__FILE__)).'/languages/');
+		load_plugin_textdomain(TEXT_DOMAIN, false, dirname(plugin_basename(__FILE__)).'/languages/');
 
 		add_shortcode( THANKS_SHORTCODE, 'WC_Shortcode_Paybox_Thankyou::get' );
 		add_filter('woocommerce_payment_gateways', 'add_paybox_commerce_gateway');
+		add_action('init', 'woocommerce_paybox_check_response');
 	}
 
 	/*
